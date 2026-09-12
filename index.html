@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ====== ЕДИНСТВЕННОЕ, ЧТО НУЖНО ПОМЕНЯТЬ: домен в og:image / og:url ====== -->
+<meta property="og:url"         content="https://ТВОЙ-ДОМЕН.vercel.app/">
+<meta property="og:image"       content="https://ТВОЙ-ДОМЕН.vercel.app/slimes.jpg">
+<meta name="twitter:image"      content="https://ТВОЙ-ДОМЕН.vercel.app/slimes.jpg">
+<!-- ========================================================================= -->
+
+<title>Power Slime</title>
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:site"        content="@powerofslime">
+<meta name="twitter:title"       content="Power Slime — Doors are open">
+<meta name="twitter:description" content="13 blobs figured out how to stay together. Come say hi.">
+<meta property="og:type"         content="website">
+<meta property="og:title"        content="Power Slime — Doors are open">
+<meta property="og:description"  content="13 blobs figured out how to stay together. Come say hi.">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt"    content="Power Slime">
+
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0; min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 20px; padding: 24px;
+    background: #05060a;
+    color: #e8f5e9;
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    text-align: center;
+  }
+  img { max-width: min(560px, 100%); border-radius: 14px; }
+  h1 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: .01em; }
+  p  { margin: 0; color: #8a9a8d; font-size: 14px; }
+  a.btn {
+    display: inline-block; margin-top: 4px;
+    padding: 12px 26px; border-radius: 999px;
+    background: #5865F2; color: #fff;
+    text-decoration: none; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  <img src="slimes.jpg" alt="Power Slime">
+  <h1>Doors are open 🟢</h1>
+  <p>Redirecting to Discord…</p>
+  <a class="btn" href="https://discord.gg/CCySBY8ub">Enter the Discord</a>
+
+  <script>
+    // JS-редирект, а не meta refresh: краулер X не выполняет скрипты,
+    // поэтому карточка собирается корректно, а живой человек улетает в Discord.
+    setTimeout(function () {
+      location.replace("https://discord.gg/CCySBY8ub");
+    }, 600);
+  </script>
+</body>
+</html>
